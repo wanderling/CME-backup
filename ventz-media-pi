@@ -17,13 +17,13 @@ chmod 755 libwidevinecdm.so && chmod 644 manifest.json
 mkdir -p ${HOME}/.config/chromium-browser/WidevineCdm
 echo '{"Path":"/opt/WidevineCdm"}' > ${HOME}/.config/chromium-browser/WidevineCdm/latest-component-updated-widevine-cdm
 sudo mkdir -p /opt/WidevineCdm/_platform_specific/linux_arm && sudo mv -f manifest.json /opt/WidevineCdm && sudo mv -f libwidevinecdm.so /opt/WidevineCdm/_platform_specific/linux_arm 
-echo "âœ… Widevin Setup Successfully"
+echo "✓… Widevin Setup Successfully"
 echo "ðŸ’¾ Downloading Chromium \"Media\" Launcher (always using your system's latest default Chromium browser)"
 wget -q --no-check-certificate https://pi.vpetkov.net/chromium-media-browser.desktop
 sudo mv -f chromium-media-browser.desktop /usr/share/applications
-echo "âœ… Chromium \"Media\" Launcher Setup Successfully"
+echo "✓… Chromium \"Media\" Launcher Setup Successfully"
 
-echo "âœ‚ï¸  Fix for Screen Tearing"
+echo "✓‚ï¸  Fix for Screen Tearing"
 if [ -e /etc/xdg/autostart/xcompmgr.desktop ]; then
     # backup - in case you want to put back the crappy refresh rate!
     sudo mv /etc/xdg/autostart/xcompmgr.desktop /root/backup.xcompmgr.desktop;
@@ -42,15 +42,15 @@ echo "ðŸ¿ Your Pi is now Ready for all Media ðŸ¿"
 echo ""
 echo "Go to the Application Menu, under \"Internet\", and start: Chromium (Media Edition)"
 
-echo "âœ… Netflix"
-echo "âœ… Hulu"
-echo "âœ… Amazon Prime"
-echo "âœ… Disney+"
-echo "âœ… HBO"
-echo "âœ… Spotify"
-echo "âœ… Pandora"
-echo "âœ… Hoopla"
-echo "âœ… MUBI"
-echo "âœ… BritBox"
+echo "✓… Netflix"
+echo "✓… Hulu"
+echo "✓… Amazon Prime"
+echo "✓… Disney+"
+echo "✓… HBO"
+echo "✓… Spotify"
+echo "✓… Pandora"
+echo "✓… Hoopla"
+echo "✓… MUBI"
+echo "✓… BritBox"
 echo ""
 echo "Please Reboot your Pi and Enjoy!"
