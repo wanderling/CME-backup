@@ -11,15 +11,15 @@
 ###########################################################
 
 echo "ðŸ’¾ Downloading latest extracted version of Widevine..."
-wget -q --no-check-certificate https://pi.vpetkov.net/libwidevinecdm.so
-wget -q --no-check-certificate https://pi.vpetkov.net/manifest.json
+#wget -q --no-check-certificate https://pi.vpetkov.net/libwidevinecdm.so
+#wget -q --no-check-certificate https://pi.vpetkov.net/manifest.json
 chmod 755 libwidevinecdm.so && chmod 644 manifest.json 
 mkdir -p ${HOME}/.config/chromium-browser/WidevineCdm
 echo '{"Path":"/opt/WidevineCdm"}' > ${HOME}/.config/chromium-browser/WidevineCdm/latest-component-updated-widevine-cdm
 sudo mkdir -p /opt/WidevineCdm/_platform_specific/linux_arm && sudo mv -f manifest.json /opt/WidevineCdm && sudo mv -f libwidevinecdm.so /opt/WidevineCdm/_platform_specific/linux_arm 
 echo "✓… Widevin Setup Successfully"
 echo "ðŸ’¾ Downloading Chromium \"Media\" Launcher (always using your system's latest default Chromium browser)"
-wget -q --no-check-certificate https://pi.vpetkov.net/chromium-media-browser.desktop
+#wget -q --no-check-certificate https://pi.vpetkov.net/chromium-media-browser.desktop
 sudo mv -f chromium-media-browser.desktop /usr/share/applications
 echo "✓… Chromium \"Media\" Launcher Setup Successfully"
 
